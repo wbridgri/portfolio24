@@ -29,3 +29,25 @@
     color: var(--red);
     transition: all 0.5s ease-out
 }
+
+.expand-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text {
+    border-left: 5px solid var(--blue);
+}
+
+#topNav {
+    border-left: 5px solid var(--red);
+    
+}
+
+img {
+    border-left: 5px solid var(--green);
+}
