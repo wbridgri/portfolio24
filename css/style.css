@@ -4,6 +4,7 @@
     --red: #FF4242;
     --green: #5CF7B1;
     --blue: #1098F7;
+    --font1: 'Inter' , sans-serif;
 }
 .period-box {
     border-style: solid;
@@ -17,6 +18,44 @@
     height 2s,
     background-color 2s,
     rotate 2s;
+}
+
+body {
+    font-family: var(--font1);
+}
+
+.portrait {
+    animation-duration: 3s;
+    animation-name: slideinRight;
+    border-left: 10px solid var(--green);
+}
+
+    @keyframes slideinRight {
+    from {
+    translate: 150vw 0;
+    scale: 200% 1;
+    }
+
+    to {
+    translate: 0 0;
+    scale: 100% 1;
+    }
+}
+.home-text {
+    animation-duration: 3s;
+    animation-name: slideinLeft;
+}
+
+    @keyframes slideinLeft {
+    from {
+    translate: -150vw 0;
+    scale: 200% 1;
+    }
+
+    to {
+    translate: 0 0;
+    scale: 100% 1;
+    }
 }
 
 
@@ -38,6 +77,15 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.nav-linkCSS {
+    width: 100%;
+    color: var(--blue);
+}
+
+.nav-linkCSS:hover {
+    color: var(--green);
 }
 
 .triangles-top {
@@ -117,9 +165,6 @@ right: 0;
 }
 
 
-img {
-    border-left: 10px solid var(--green);
-}
 #topNav:first-child {
     border-left: 10px solid var(--red);
     padding-left: 10px;
