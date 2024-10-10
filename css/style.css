@@ -7,17 +7,20 @@
     --font1: 'Inter' , sans-serif;
 }
 .period-box {
+    position: absolute;
     border-style: solid;
     border-width: 1px;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 7px;
+    height: 7px;
     background-color: var(--red);
     transition:
     width 2s,
     height 2s,
     background-color 2s,
     rotate 2s;
+    top: 50.5%;
+    right: 42.45%;
 }
 
 body {
@@ -170,5 +173,8 @@ right: 0;
     padding-left: 10px;
 }
 
+.top-nav-item {
+    font-size: calc(12px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
 
 
