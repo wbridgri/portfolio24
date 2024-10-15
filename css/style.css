@@ -24,41 +24,30 @@
 }
 
 body {
+    opacity: 1;
     font-family: var(--font1);
 }
 
+@keyframes fade-in {
+    to {
+        opacity: 0;
+        scale: 1 0.9;
+    }
+}
+#section1, #section2, #section3, #section4 {
+    animation: fade-in linear forwards;
+    animation-timeline: view(0px 750px);
+    animation-range-start: cover;
+/* make sure to look this up so we can explain how it works */
+}
+
+#section2, #section3, #section4 {
+    background-color: var(--blue);
+    color: white;
+}
+
 .portrait {
-    animation-duration: 3s;
-    animation-name: slideinRight;
-    border-left: 10px solid var(--green);
-}
-
-    @keyframes slideinRight {
-    from {
-    translate: 150vw 0;
-    scale: 200% 1;
-    }
-
-    to {
-    translate: 0 0;
-    scale: 100% 1;
-    }
-}
-.home-text {
-    animation-duration: 3s;
-    animation-name: slideinLeft;
-}
-
-    @keyframes slideinLeft {
-    from {
-    translate: -150vw 0;
-    scale: 200% 1;
-    }
-
-    to {
-    translate: 0 0;
-    scale: 100% 1;
-    }
+    border-left: 10px solid var(--green)
 }
 
 
@@ -173,8 +162,26 @@ right: 0;
     padding-left: 10px;
 }
 
+
+
 .top-nav-item {
     font-size: calc(12px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
+
+.top-nav-link {
+    color: black;
+}
+
+.top-nav-link:hover {
+    color: black;
+    border-bottom: 10px solid var(--red);
+    
+}
+
+.top-nav-link:active {
+    border-bottom: 10px solid var(--green);
+    transition: 0ms;
+}
+
 
 
