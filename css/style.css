@@ -28,6 +28,23 @@ body {
     font-family: var(--font1);
 }
 
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0px 5px;
+}
+
+.button {
+    background-color: var(--blue);
+    border: none;
+}
+
+.button:hover {
+background-color: var(--green);
+}
+
+
 @keyframes fade-in {
     to {
         opacity: 0;
@@ -42,10 +59,6 @@ body {
 /* make sure to look this up so we can explain how it works */
 }
 
-#section2, #section3, #section4 {
-    background-color: var(--blue);
-    color: white;
-}
 
 .portrait {
     border-left: 10px solid var(--green)
@@ -85,6 +98,7 @@ body {
 position: fixed;
 top: 0;
 left: 0;
+z-index: 1;
 }
 .triangle-red {
     position: absolute;
