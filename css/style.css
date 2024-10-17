@@ -34,6 +34,7 @@ body {
         scale: 1 0.9;
     }
 }
+/* think about turning this off for section 4 AKA the projects section */
 #section1, #section2, #section3, #section4 {
     animation: fade-in linear forwards;
     animation-timeline: view(0px 750px);
@@ -165,7 +166,7 @@ right: 0;
 
 
 .top-nav-item {
-    font-size: calc(12px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (32 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .top-nav-link {
