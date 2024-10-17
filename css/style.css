@@ -85,6 +85,7 @@ background-color: var(--green);
     align-items: center;
 }
 
+
 .nav-linkCSS {
     width: 100%;
     color: var(--blue);
@@ -185,6 +186,7 @@ right: 0;
 
 .top-nav-link {
     color: black;
+    border-bottom: 10px solid transparent;
 }
 
 .top-nav-link:hover {
