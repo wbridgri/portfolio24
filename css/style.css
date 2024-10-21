@@ -6,6 +6,8 @@
     --blue: #1098F7;
     --font1: 'Inter' , sans-serif;
 }
+/*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!For example, the contrast between the text and the background of a heading should be at least 4.5:1 */
+
 .period-box {
     position: absolute;
     border-style: solid;
@@ -22,7 +24,11 @@
     top: 50.5%;
     right: 42.45%;
 }
-
+@media (prefers-reduced-motion: no-preference){
+    * {
+        scroll-behavior: smooth;
+    }
+    }
 body {
     opacity: 1;
     font-family: var(--font1);
@@ -61,7 +67,8 @@ background-color: var(--green);
 
 
 .portrait {
-    border-left: 10px solid var(--green)
+    box-shadow: -10px 0px 0px 0px var(--green)
+    
 }
 
 
@@ -94,6 +101,8 @@ background-color: var(--green);
 .nav-linkCSS:hover {
     color: var(--green);
 }
+
+
 
 .triangles-top {
 position: fixed;
@@ -178,10 +187,15 @@ right: 0;
     padding-left: 10px;
 }
 
+#topNav > li {
+    display: inline-block;
+
+}
 
 
 .top-nav-item {
-    font-size: calc(10px + (32 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (48 - 10) * ((100vw - 300px) / (1600 - 300)));
+    padding: 0;
 }
 
 .top-nav-link {
