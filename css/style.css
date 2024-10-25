@@ -8,6 +8,83 @@
 }
 /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!For example, the contrast between the text and the background of a heading should be at least 4.5:1 */
 
+@media (prefers-reduced-motion: no-preference){
+    * {
+        scroll-behavior: smooth;
+    }
+}
+@keyframes fade-in {
+    to {
+        opacity: 0;
+        scale: 1 0.9;
+    }
+}
+/* think about turning this off for section 4 AKA the projects section */
+#section1, #section2, #section3, #section4 {
+    animation: fade-in linear forwards;
+    animation-timeline: view(0px 750px);
+    animation-range-start: cover;
+}
+/* make sure to look this up so we can explain how it works */
+
+/* tags */
+
+body {
+    opacity: 1;
+    font-family: var(--font1);
+}
+section {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+/* classes */
+.body-shot {
+    border-left: 10px solid var(--red);
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0px 5px;
+}
+
+.button {
+    background-color: var(--blue);
+    border: none;
+}
+
+.button:hover {
+    background-color: var(--green);
+}
+
+.expand-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text {
+    border-left: 5px solid var(--blue);
+    padding-left: 10px;
+    margin: auto;
+}
+
+
+.nav-linkCSS {
+    font-weight: 800;
+    width: 100%;
+    color: var(--blue);
+}
+
+.nav-linkCSS:hover {
+    color: var(--green);
+}
+
 .period-box {
     position: absolute;
     border-style: solid;
@@ -24,53 +101,6 @@
     top: 50.5%;
     right: 42.45%;
 }
-@media (prefers-reduced-motion: no-preference){
-    * {
-        scroll-behavior: smooth;
-    }
-    }
-body {
-    opacity: 1;
-    font-family: var(--font1);
-}
-
-.button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 0px 5px;
-}
-
-.button {
-    background-color: var(--blue);
-    border: none;
-}
-
-.button:hover {
-background-color: var(--green);
-}
-
-
-@keyframes fade-in {
-    to {
-        opacity: 0;
-        scale: 1 0.9;
-    }
-}
-/* think about turning this off for section 4 AKA the projects section */
-#section1, #section2, #section3, #section4 {
-    animation: fade-in linear forwards;
-    animation-timeline: view(0px 750px);
-    animation-range-start: cover;
-/* make sure to look this up so we can explain how it works */
-}
-
-
-.portrait {
-    box-shadow: -10px 0px 0px 0px var(--green)
-    
-}
-
 
 .period-box:hover {
     background-color: var(--green);
@@ -78,120 +108,26 @@ background-color: var(--green);
     height: 200px;
 }
 
+.portrait {
+    box-shadow: -10px 0px 0px 0px var(--green);
+    height: 500px;
+    margin: auto;
+    
+}
+
+.splash-header {
+    border-bottom: 5px solid var(--blue);
+}
+
+.splash-subheading {
+    border-bottom: 5px solid var(--red);
+}
+
+
 .text-link:hover .period{
     color: var(--red);
     transition: all 0.5s ease-out
-}
-
-.expand-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.nav-linkCSS {
-    width: 100%;
-    color: var(--blue);
-}
-
-.nav-linkCSS:hover {
-    color: var(--green);
-}
-
-
-
-.triangles-top {
-position: fixed;
-top: 0;
-left: 0;
-z-index: 1;
-}
-.triangle-red {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 100px solid var(--red);
-    border-right: 100px solid transparent;
-    top: 0;
-    left: 0;
-}
-
-.triangle-green {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 75px solid var(--green);
-    border-right: 75px solid transparent;
-    top: 0;
-    left: 0;
-}
-.triangle-blue {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 50px solid var(--blue);
-    border-right: 50px solid transparent;
-    top: 0;
-    left: 0;
-}
-
-.triangle-red-bottom {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 100px solid var(--red);
-    border-left: 100px solid transparent;
-    bottom: 0;
-    right: 0;
-}
-
-.triangle-green-bottom {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 75px solid var(--green);
-    border-left: 75px solid transparent;
-bottom: 0;
-right: 0;
-}
-
-
-.triangle-blue-bottom {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid var(--blue);
-    border-left: 50px solid transparent;
-    bottom: 0;
-    right: 0;
-}
-
-.triangles-bottom {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-.home-text {
-    border-left: 5px solid var(--blue);
-    padding-left: 10px;
-}
-
-
-#topNav:first-child {
-    border-left: 10px solid var(--red);
-    padding-left: 10px;
-}
-
-#topNav > li {
-    display: inline-block;
-
-}
-
+}    
 
 .top-nav-item {
     font-size: calc(10px + (48 - 10) * ((100vw - 300px) / (1600 - 300)));
@@ -213,6 +149,93 @@ right: 0;
     border-bottom: 10px solid var(--green);
     transition: 0ms;
 }
+
+
+.triangles-top {
+    position: fixed;
+top: 0;    
+left: 0;
+z-index: 1;
+}
+.triangle-red {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--red);
+    border-right: 100px solid transparent;
+    top: 0;
+    left: 0;
+}    
+
+.triangle-green {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 75px solid var(--green);
+    border-right: 75px solid transparent;
+    top: 0;
+    left: 0;
+}    
+.triangle-blue {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 50px solid var(--blue);
+    border-right: 50px solid transparent;
+    top: 0;
+    left: 0;
+}    
+
+.triangle-red-bottom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--red);
+    border-left: 100px solid transparent;
+    bottom: 0;
+    right: 0;
+}    
+
+.triangle-green-bottom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 75px solid var(--green);
+    border-left: 75px solid transparent;
+bottom: 0;    
+right: 0;
+}
+
+
+.triangle-blue-bottom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid var(--blue);
+    border-left: 50px solid transparent;
+    bottom: 0;
+    right: 0;
+}    
+
+.triangles-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}    
+
+/* ids */
+
+
+#topNav:first-child {
+    border-left: 10px solid var(--red);
+    padding-left: 10px;
+}    
+
+#topNav > li {
+    display: inline-block;
+
+}    
+
 
 
 
