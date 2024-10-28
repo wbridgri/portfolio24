@@ -20,7 +20,7 @@
     }
 }
 /* think about turning this off for section 4 AKA the projects section */
-#section1, #section2, #section3, #section4 {
+#section1, #section2 {
     animation: fade-in linear forwards;
     animation-timeline: view(0px 750px);
     animation-range-start: cover;
@@ -74,6 +74,28 @@ section {
     margin: auto;
 }
 
+.icons {
+    list-style-type: none;
+    transition: transform 2s; /* Animation */
+}
+
+.laptop-icon {
+    color: var(--blue);
+}
+
+.laptop-icon:hover {
+    transform: scale(1.5);
+}
+
+.math-icon {
+    color: var(--red);
+}
+
+.math-icon:hover {
+    color: var(--red);
+    transform: scale(1.5);
+}
+
 
 .nav-linkCSS {
     font-weight: 800;
@@ -85,43 +107,18 @@ section {
     color: var(--green);
 }
 
-.period-box {
-    position: absolute;
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 7px;
-    height: 7px;
-    background-color: var(--red);
-    transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    rotate 2s;
-    top: 50.5%;
-    right: 42.45%;
-}
-
-.period-box:hover {
-    background-color: var(--green);
-    width: 100%;
-    height: 200px;
-}
 
 .portrait {
     box-shadow: -10px 0px 0px 0px var(--green);
-    height: 500px;
+    height: 65vh;
     margin: auto;
     
 }
 
-.splash-header {
-    border-bottom: 5px solid var(--blue);
+.splash-text {
+    list-style-type: none;
 }
 
-.splash-subheading {
-    border-bottom: 5px solid var(--red);
-}
 
 
 .text-link:hover .period{
@@ -153,9 +150,9 @@ section {
 
 .triangles-top {
     position: fixed;
-top: 0;    
-left: 0;
-z-index: 1;
+    top: 0;    
+    left: 0;
+    z-index: 0;
 }
 .triangle-red {
     position: absolute;
@@ -202,8 +199,8 @@ z-index: 1;
     height: 0;
     border-bottom: 75px solid var(--green);
     border-left: 75px solid transparent;
-bottom: 0;    
-right: 0;
+    bottom: 0;    
+    right: 0;
 }
 
 
@@ -223,6 +220,14 @@ right: 0;
     right: 0;
 }    
 
+.wrench-icon {
+    color: var(--green);
+}
+
+.wrench-icon:hover {
+    color: var(--green);
+    transform: scale(1.5);
+}
 /* ids */
 
 
@@ -233,9 +238,69 @@ right: 0;
 
 #topNav > li {
     display: inline-block;
-
+    
 }    
 
+@media (width <= 787px) {
+    .triangle-red {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 50px solid var(--red);
+        border-right: 50px solid transparent;
+        top: 0;
+        left: 0;
+    }    
+    
+    .triangle-green {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 37.5px solid var(--green);
+        border-right: 37.5px solid transparent;
+        top: 0;
+        left: 0;
+    }    
+    .triangle-blue {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 25px solid var(--blue);
+        border-right: 25px solid transparent;
+        top: 0;
+        left: 0;
+    }    
+    .triangle-red-bottom {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 50px solid var(--red);
+        border-left: 50px solid transparent;
+        bottom: 0;
+        right: 0;
+    }    
+    
+    .triangle-green-bottom {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 37.5px solid var(--green);
+        border-left: 37.5px solid transparent;
+    bottom: 0;    
+    right: 0;
+    }
+    
+    
+    .triangle-blue-bottom {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 25px solid var(--blue);
+        border-left: 25px solid transparent;
+        bottom: 0;
+        right: 0;
+    }    
+}
 
 
 
