@@ -20,7 +20,7 @@
     }
 }
 /* media queries */
-@media(width >= 787px) {
+@media(width > 787px) {
     #section1, #section2 {
         animation: fade-in linear forwards;
         animation-timeline: view(0px 750px);
@@ -140,7 +140,6 @@ section {
     margin-top: 10px;
     border: 5px solid var(--blue);
     border-radius: 5px;
-    width: 60%;
 }
 
 
