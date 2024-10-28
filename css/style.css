@@ -19,13 +19,20 @@
         scale: 1 0.9;
     }
 }
-/* think about turning this off for section 4 AKA the projects section */
-#section1, #section2 {
-    animation: fade-in linear forwards;
-    animation-timeline: view(0px 750px);
-    animation-range-start: cover;
+/* media queries */
+@media(width >= 787px) {
+    #section1, #section2 {
+        animation: fade-in linear forwards;
+        animation-timeline: view(0px 750px);
+        animation-range-start: cover;
+    }
 }
-/* make sure to look this up so we can explain how it works */
+@media(max-width: 787px) {
+    #section1, #section2 {
+        animation: none;
+    }
+}
+
 
 /* tags */
 
@@ -39,6 +46,10 @@ section {
     padding-top: 50px;
 }
 /* classes */
+
+.about-text {
+    border-left: 10px solid var(--blue);
+}
 .body-shot {
     border-left: 10px solid var(--red);
 }
@@ -85,6 +96,7 @@ section {
 
 .laptop-icon:hover {
     transform: scale(1.5);
+    color: var(--red);
 }
 
 .math-icon {
@@ -92,8 +104,9 @@ section {
 }
 
 .math-icon:hover {
-    color: var(--red);
+    color: var(--blue);
     transform: scale(1.5);
+
 }
 
 
@@ -113,6 +126,10 @@ section {
     height: 65vh;
     margin: auto;
     
+}
+
+.projects-text {
+    border-left: 10px solid var(--green);
 }
 
 .splash-text {
@@ -225,7 +242,7 @@ section {
 }
 
 .wrench-icon:hover {
-    color: var(--green);
+    color: var(--blue);
     transform: scale(1.5);
 }
 /* ids */
